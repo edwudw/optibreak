@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "OptiBreak",
+  "version": "1.0",
+  "description": "Sends a notification every 20 minutes to look away at an object 20 feet away for 20 seconds.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "notifications",
+    "alarms",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon128.png"
+    }
+  },
+  "options_page": "options.html",
+  "icons": {
+    "128": "icon128.png"
+  }
+}
