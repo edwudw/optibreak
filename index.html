@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OptiBreak Chrome Extension</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      color: #102542;
+    }
+    header {
+      background: #102542;
+      color: #fff;
+      padding: 32px 0 18px 0;
+      text-align: center;
+    }
+    header img {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: 2.2em;
+      font-weight: 700;
+    }
+    .container {
+      max-width: 700px;
+      margin: 32px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      padding: 32px 28px 28px 28px;
+    }
+    h2 {
+      color: #102542;
+      font-size: 1.3em;
+      margin-top: 0;
+    }
+    ul {
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+    li {
+      margin-bottom: 10px;
+      font-size: 1.08em;
+    }
+    .screenshots {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 18px;
+      justify-content: center;
+    }
+    .screenshots img {
+      border: 2px solid #102542;
+      border-radius: 8px;
+      background: #fff;
+      max-width: 320px;
+      max-height: 220px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    }
+    .note {
+      background: #e0eafc;
+      color: #102542;
+      border-left: 4px solid #38c6ff;
+      padding: 12px 18px;
+      border-radius: 6px;
+      margin: 24px 0 0 0;
+      font-size: 1em;
+    }
+    @media (max-width: 800px) {
+      .container { padding: 18px 4vw; }
+      .screenshots img { max-width: 98vw; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="icon128.png" alt="OptiBreak icon">
+    <h1>OptiBreak Chrome Extension</h1>
+    <div>Take regular breaks for healthier eyes!</div>
+  </header>
+  <div class="container">
+    <h2>Features</h2>
+    <ul>
+      <li>Reminds you every <b>customizable interval</b> (default: 20 minutes) to take a 20-20-20 eye break.</li>
+      <li>Shows a <b>real-time countdown</b> to your next break when you click the extension icon.</li>
+      <li>Easy-to-use <b>options page</b> to set your preferred reminder interval.</li>
+      <li>Accessible, high-contrast design for all users.</li>
+      <li>Works entirely offline and respects your privacy.</li>
+    </ul>
+    <h2>How it works</h2>
+    <ol>
+      <li>Install the extension from the Chrome Web Store.</li>
+      <li>Click the OptiBreak icon to see the countdown to your next break.</li>
+      <li>Click <b>Options</b> in the popup to set your preferred reminder interval.</li>
+      <li>Every interval, you'll get a notification reminding you to look away for 20 seconds.</li>
+    </ol>
+    <div class="screenshots">
+      <img src="screenshot1.png" alt="OptiBreak popup screenshot">
+      <img src="screenshot2.png" alt="OptiBreak options page screenshot">
+      <img src="screenshot3.png" alt="OptiBreak notification screenshot">
+    </div>
+  </div>
+</body>
+</html>
