@@ -1,7 +1,4 @@
 // background.js
-const extpay = ExtPay('optibreak');
-extpay.startBackground();
-
 const NOTIFICATION_ID = "eyecare-20-20-20";
 let currentInterval = 20;
 let lastAlarmTime = null;
@@ -21,25 +18,11 @@ function initAlarmFromStorage() {
 }
 
 chrome.runtime.onInstalled.addListener(() => {
-  extpay.getUser().then(user => {
-      if (user.paid) {
-          // User has paid, proceed with normal functionality
-          initAlarmFromStorage();
-      } else {
-          extpay.openPaymentPage()
-      }
-  })
+  initAlarmFromStorage();
 });
 
 chrome.runtime.onStartup.addListener(() => {
-  extpay.getUser().then(user => {
-      if (user.paid) {
-          // User has paid, proceed with normal functionality
-          initAlarmFromStorage();
-      } else {
-          extpay.openPaymentPage()
-      }
-  })
+  initAlarmFromStorage();
 });
 
 chrome.alarms.onAlarm.addListener((alarm) => {
