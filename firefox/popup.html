@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OptiBreak Timer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      min-width: 220px;
+      margin: 0;
+      padding: 0;
+          background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 180px;
+    }
+    h3 {
+      margin-top: 18px;
+      margin-bottom: 8px;
+      color: #102542;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    #time {
+      font-size: 2.1em;
+      margin: 10px 0 18px 0;
+      color: #102542;
+      font-weight: bold;
+      text-shadow: 0 1px 2px #fff;
+    }
+    #optionsBtn {
+      background: #102542;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 22px;
+      font-size: 1em;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      transition: background 0.2s, color 0.2s, transform 0.1s;
+      outline: 2px solid transparent;
+    }
+    #optionsBtn:focus, #optionsBtn:hover {
+      background: #fff;
+      color: #102542;
+      outline: 2px solid #102542;
+      transform: translateY(-2px) scale(1.04);
+    }
+  </style>
+</head>
+<body>
+  <h3>Next break in:</h3>
+  <div id="time">...</div>
+  <button id="optionsBtn">Options</button>
+  <script src="popup.js"></script>
+</body>
+</html>
