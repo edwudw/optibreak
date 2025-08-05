@@ -32,7 +32,8 @@ chrome.alarms.onAlarm.addListener((alarm) => {
       iconUrl: "icon128.png",
       title: "OptiBreak Reminder",
       message: "Look away at something 20 feet away for 20 seconds!",
-      priority: 2
+      priority: 2,
+      requireInteraction: true
     });
     lastAlarmTime = Date.now();
   }
