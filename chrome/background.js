@@ -27,13 +27,15 @@ chrome.runtime.onStartup.addListener(() => {
 
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === "eyecareAlarm") {
-    chrome.notifications.create(NOTIFICATION_ID, {
+    chrome.notifications.clear(NOTIFICATION_ID, () => {
+      chrome.notifications.create(NOTIFICATION_ID, {
       type: "basic",
       iconUrl: "icon128.png",
       title: "OptiBreak Reminder",
       message: "Look away at something 20 feet away for 20 seconds!",
       priority: 2,
       requireInteraction: true
+      });
     });
     lastAlarmTime = Date.now();
   }
