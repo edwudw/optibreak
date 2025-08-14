@@ -32,12 +32,14 @@ browser.runtime.onStartup.addListener(() => {
 
 browser.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === "eyecareAlarm") {
-    browser.notifications.create(NOTIFICATION_ID, {
-      type: "basic",
-      iconUrl: "icon128.png",
-      title: "OptiBreak Reminder",
-      message: "Look away at something 20 feet away for 20 seconds!",
-      priority: 2 // Ignored in Firefox, but safe for Chrome
+    browser.notifications.clear(NOTIFICATION_ID, () => {
+      browser.notifications.create(NOTIFICATION_ID, {
+        type: "basic",
+        iconUrl: "icon128.png",
+        title: "OptiBreak Reminder",
+        message: "Look away at something 20 feet away for 20 seconds!",
+        priority: 2 // Ignored in Firefox, but safe for Chrome
+      });
     });
     lastAlarmTime = Date.now();
   }
