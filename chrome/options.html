@@ -75,6 +75,49 @@
       font-weight: 600;
       min-height: 20px;
     }
+    .google-auth-btn {
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 22px;
+      font-size: 1em;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      transition: background 0.2s, color 0.2s, transform 0.1s;
+      outline: 2px solid transparent;
+      display: flex;
+      align-items: center;
+    }
+    .google-auth-btn img {
+      height: 18px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    #googleSignInBtn {
+      background: #4285F4;
+    }
+    #googleSignInBtn:focus, #googleSignInBtn:hover {
+      background: #fff;
+      color: #4285F4;
+      outline: 2px solid #4285F4;
+      transform: translateY(-2px) scale(1.04);
+    }
+    #googleSignOutBtn {
+      background: #db4437; /* Google Red */
+    }
+    #googleSignOutBtn:focus, #googleSignOutBtn:hover {
+      background: #fff;
+      color: #db4437;
+      outline: 2px solid #db4437;
+      transform: translateY(-2px) scale(1.04);
+    }
+    #googleStatus {
+      margin-top: 8px;
+      color: #102542;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
@@ -86,6 +129,20 @@
     <button type="submit">Save</button>
   </form>
   <div id="status"></div>
+
+  <hr style="width: 80%; max-width: 500px; margin: 1rem 0; border: 0; border-top: 1px solid #e0e0e0;">
+
+  <h2>Google Calendar Integration</h2>
+  <p style="text-align: center; max-width: 400px; margin-top: -10px; margin-bottom: 10px; color: #555;">
+    Optionally, sign in to automatically pause notifications during meetings.
+  </p>
+  <button id="googleSignInBtn" class="google-auth-btn" style="margin-top: 12px;">
+    <img src="calendar.png" alt="Google"> Sign in to Google Calendar
+  </button>
+  <button id="googleSignOutBtn" class="google-auth-btn" style="display: none; margin-top: 12px;">
+    <img src="calendar.png" alt="Google"> Sign Out
+  </button>
+  <div id="googleStatus"></div>
   <script src="options.js"></script>
 </body>
 </html>

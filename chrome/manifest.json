@@ -6,11 +6,19 @@
   "background": {
     "service_worker": "background.js"
   },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3I+lFm4Gk30PXcYjAzObaNQ0AcinB4LiL49oYACS5JsQ5IpuL4U8vmpI+hISDudM1LbdqMM2x9g4Rg+WJ4MfNZc1EDQLA2r9yk+Xr25vo7nVsHK3wfL20tQhsc6gikQnX4xafkV3Z7w+mCIfdDm3il/NqDdKl6jnIjJz0C4WEJH3gXTcC5qFhoPGn4A5AI9M3ye+sN0sJWWQ0sJBOC1VrvBo2OaU/fp2nudhyc/6+zNHvB3HBFGqkfyEZpIKwPSBZVCSBVyDsd+b+5Q04LjTujMBnpTML+5AxuiFIM9mlxWK6YpXCAJUm8r5Kaxld3wgoAHriWvRUpQjIlecg0y75QIDAQAB",
   "permissions": [
     "notifications",
     "alarms",
-    "storage"
+    "storage",
+    "identity"
   ],
+  "oauth2": {
+    "client_id": "781933626267-lbpfj3ugio8l9gi0dqlov9r0keevn94r.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar.readonly"
+    ]
+  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
